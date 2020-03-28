@@ -13,13 +13,10 @@ header{
     padding: 0;
 }
 
-.event{
-    width: 480px;
-}
-
 .newIn{
     text-align: center;
 }
+
 
 button {
     border: 1px solid rgba(0, 0, 0, .20);

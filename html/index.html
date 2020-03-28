@@ -10,25 +10,25 @@
     <script src="../js/login.js"></script>
 </head>
 <body>
-    <div class="bg"></div>
-    <h1>Bienvenue sur Note-it</h1>
-    <h2>Créez des listes, programmez des rappels, invitez des amis <br>
-        et commmencez à organiser vos soirées et évènements.</h2>
+<div class="bg"></div>
+<h1>Bienvenue sur Note-it</h1>
+<h2>Créez des listes, programmez des rappels, invitez des amis <br>
+    et commmencez à organiser vos soirées et évènements.</h2>
+<br>
+<div id="change" name="connexion">
+    <h3>Connectez-vous :</h3>
     <br>
-    <div id="change">
-        <h3>Connectez-vous :</h3>
+    <div id="message" style="display:none"></div>
+    <br>
+    <form action="../json/login.php" method="post" id="login-form">
+        <input type="text" name="pseudo" placeholder="Pseudo">
         <br>
-        <div id="message" style="display:none"></div>
+        <input type="password" name="password" placeholder="Mot de passe" >
         <br>
-        <form action="../json/login.php" method="post" id="login-form">
-            <input type="text" name="mail" placeholder="Adresse e-mail">
-            <br>
-            <input type="password" name="password" placeholder="Mot de passe" >
-            <br>
-            <button type="submit" class="submit">Continuer</button>
-        </form>
-        <br>
-        <a class="lien">Pas encore de compte ?</a>
-    </div>
+        <button type="submit" class="submit">Continuer</button>
+    </form>
+    <br>
+    <a class="lien">Pas encore de compte ?</a>
+</div>
 </body>
 </html>

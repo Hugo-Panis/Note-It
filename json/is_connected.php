@@ -9,7 +9,7 @@ header('Content-type: application/json');
 
 $obj = new stdClass();
 
-if (isset($_SESSION['mail'], $_SESSION['password'])){
+if (isset($_SESSION['pseudo'], $_SESSION['password'])){
     $obj->isConnected = true;
 }else {
     $obj->isConnected = false;

@@ -61,42 +61,44 @@
 
 
         $('.lien').click(function(){
-            $('#change')
-                .html('<h3>Créez votre compte :</h3>\n' +
-                    '<br>\n' +
-                    '<div id="message" style="display:none"></div>\n' +
-                    '<br>\n' +
-                    '<form action="../json/register.php" method="POST" id="register-form">\n' +
-                    '    <input type="text" name="email" placeholder="Adresse e-mail" class="input">\n' +
-                    '    <br>\n' +
-                    '    <input type="text" name="prenom" placeholder="Prénom" class="input">\n' +
-                    '    <br>\n' +
-                    '    <input type="password" name="nom" placeholder="Nom" class="input">\n' +
-                    '    <br>\n' +
-                    '    <input type="password" name="password" placeholder="Mot de passe" class="input">\n' +
-                    '    <br>\n' +
-                    '    <button type="submit" class="submit">Créer mon compte</button>\n' +
-                    '</form>\n' +
-                    '<br>\n' +
-                    '<a href="index.html" class="lien">Je possède déjà un compte</a>');
+            if ($('#change').attr('name') === 'connexion') {
+                $('#change')
+                    .html('<h3>Créez votre compte :</h3>\n' +
+                        '<br>\n' +
+                        '<div id="message" style="display:none"></div>\n' +
+                        '<br>\n' +
+                        '<form action="../json/register.php" method="POST" id="register-form">\n' +
+                        '    <input type="text" name="email" placeholder="Adresse e-mail" class="input">\n' +
+                        '    <br>\n' +
+                        '    <input type="text" name="prenom" placeholder="Prénom" class="input">\n' +
+                        '    <br>\n' +
+                        '    <input type="password" name="nom" placeholder="Nom" class="input">\n' +
+                        '    <br>\n' +
+                        '    <input type="password" name="password" placeholder="Mot de passe" class="input">\n' +
+                        '    <br>\n' +
+                        '    <button type="submit" class="submit">Créer mon compte</button>\n' +
+                        '</form>\n' +
+                        '<br>\n' +
+                        '<a href="index.html" class="lien">Je possède déjà un compte</a>');
+                $('#change').attr('name', "creation");
+            } else {
+                $('#change')
+                    .html('<h3>Connectez-vous :</h3>\n' +
+                        '        <br>\n' +
+                        '        <div id="message" style="display:none"></div>\n' +
+                        '        <br>\n' +
+                        '        <form action="../json/login.php" method="post" id="login-form">\n' +
+                        '            <input class="input" type="text" name="mail" placeholder="Adresse e-mail">\n' +
+                        '            <br>\n' +
+                        '            <input class="input" type="password" name="password" placeholder="Mot de passe" >\n' +
+                        '            <br>\n' +
+                        '            <button type="submit" class="submit">Continuer</button>\n' +
+                        '        </form>\n' +
+                        '        <br>\n' +
+                        '        <a class="lien">Pas encore de compte ?</a>');
+                $('#change').attr('name', 'connexion');
+            }
         })
-
-        /*$('.lien').click(function(){
-            $('#change')
-                .html('<h3>Connectez-vous :</h3>\n' +
-                    '        <br>\n' +
-                    '        <div id="message" style="display:none"></div>\n' +
-                    '        <br>\n' +
-                    '        <form action="../json/login.php" method="post" id="login-form">\n' +
-                    '            <input class="input" type="text" name="mail" placeholder="Adresse e-mail">\n' +
-                    '            <br>\n' +
-                    '            <input class="input" type="password" name="password" placeholder="Mot de passe" >\n' +
-                    '            <br>\n' +
-                    '            <button type="submit" class="submit">Continuer</button>\n' +
-                    '        </form>\n' +
-                    '        <br>\n' +
-                    '        <a class="lien">Pas encore de compte ?</a>');
-        })*/
     });
 
 }) ();

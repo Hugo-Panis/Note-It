@@ -1,12 +1,16 @@
 {
   "users":[
     {
-      "mail": "bonjour",
-      "password": "bonjour"
+      "pseudo": "Marcel",
+      "password": "marcel"
     },
     {
-      "mail": "cpt",
-      "password": "123"
+      "pseudo": "test",
+      "password": "test"
+    },
+    {
+      "pseudo": "admin",
+      "password": "admin"
     }
   ]
 }
