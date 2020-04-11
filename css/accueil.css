@@ -1,8 +1,20 @@
 header{
     position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
     top: 0;
     left: 0;
     right: 0;
+}
+
+header li {
+    padding: 15px;
+    list-style: none;
+}
+
+.titre{
+    margin-top: 150px;
 }
 
 #icon {
@@ -16,7 +28,6 @@ header{
 .newIn{
     text-align: center;
 }
-
 
 button {
     border: 1px solid rgba(0, 0, 0, .20);

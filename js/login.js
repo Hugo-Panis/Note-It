@@ -1,31 +1,7 @@
 (function(){
     'use strict';
     $(() =>{
-        /* verifie si l'utilisateur est connecté */
-        $.ajax({
-            url: '../json/is_connected.php',
-            method: 'GET'
-        })
-            .done(function (data){
-                console.log(data);
-                //si tu es deja connecté:
-                if (data.isConnected === true){
-                    $('body').append(
-                        $('<button />')
-                            .html('Déconnexion')
-                            .click(function (){
-                                $.ajax({
-                                    url: '../json/logout.php',
-                                    method: 'GET'
-                                })
-                                    .done(function() {
-                                        console.log("pb de connexion");
-                                        window.location.href = '../html/index.html';
-                                    })
-                            })
-                    )
-                }
-            })
+
         // envoyer les variables issues d'un formulaire HTML à un script PHP en AJAX
         $('#login-form').submit(function() {
             $.ajax({
@@ -57,7 +33,7 @@
                 method: $(this).attr('method'),
                 data: $(this).serialize()
             })
-        })
+        });
 
 
         $('.lien').click(function(){
@@ -68,7 +44,7 @@
                         '<div id="message" style="display:none"></div>\n' +
                         '<br>\n' +
                         '<form action="../json/register.php" method="POST" id="register-form">\n' +
-                        '    <input type="text" name="email" placeholder="Adresse e-mail" class="input">\n' +
+                        '    <input type="text" name="pseudo" placeholder="Pseudo" class="input">\n' +
                         '    <br>\n' +
                         '    <input type="text" name="prenom" placeholder="Prénom" class="input">\n' +
                         '    <br>\n' +

@@ -1,14 +1,17 @@
 {
   "users":[
     {
+      "id": 0,
       "pseudo": "Marcel",
       "password": "marcel"
     },
     {
+      "id": 1,
       "pseudo": "test",
       "password": "test"
     },
     {
+      "id": 2,
       "pseudo": "admin",
       "password": "admin"
     }

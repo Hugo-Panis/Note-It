@@ -11,7 +11,9 @@ $obj = new stdClass();
 
 if (isset($_SESSION['pseudo'], $_SESSION['password'])){
     $obj->isConnected = true;
+    $obj->user = $_SESSION['pseudo'];
+    $obj->password = $_SESSION['password'];
 }else {
     $obj->isConnected = false;
 }
-echo json_encode($obj); // encode en format json pour des données en dur
+echo json_encode($obj);
