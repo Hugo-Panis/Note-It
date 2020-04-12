@@ -25,6 +25,10 @@ header li {
     padding: 0;
 }
 
+#icon:hover{
+    color: grey;
+}
+
 .newIn{
     text-align: center;
 }
