@@ -18,12 +18,12 @@
                                     })
                                     .done(function () {
                                         console.log("pb de connexion");
-                                        window.location.href = '../html/index.html';
+                                        window.location.href = '../index.html';
                                     })
                     })
 
                 } else {
-                    window.location.href = '../html/index.html';
+                    window.location.href = '../index.html';
                 }
             });
     });

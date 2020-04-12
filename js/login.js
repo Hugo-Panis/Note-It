@@ -13,7 +13,7 @@
                 .done(function(data) {
                     console.log(data);
                     if(data.success === true) {
-                        window.location.href = '../html/accueil.html';
+                        window.location.href = '../accueil.html';
                     } else {
                         $('#message')
                             .html(data.message)

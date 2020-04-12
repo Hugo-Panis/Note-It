@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note-it</title>
+
+    <!-- styles-->
+    <link rel="stylesheet" href="css/basic.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- scripts -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/login.js"></script>
+
+</head>
+<body>
+<div class="bg"></div>
+<h1>Bienvenue sur Note-it</h1>
+<h2>Créez des listes, programmez des rappels, invitez des amis <br>
+    et commmencez à organiser vos soirées et évènements.</h2>
+<br>
+<div id="change" name="connexion">
+    <h3>Connectez-vous :</h3>
+    <br>
+    <div id="message" style="display:none"></div>
+    <br>
+    <form action="json/login.php" method="post" id="login-form">
+        <input type="text" name="pseudo" placeholder="Pseudo">
+        <br>
+        <input type="password" name="password" placeholder="Mot de passe" >
+        <br>
+        <button type="submit" class="submit">Continuer</button>
+    </form>
+    <br>
+    <a class="lien">Pas encore de compte ?</a>
+</div>
+</body>
+</html>
